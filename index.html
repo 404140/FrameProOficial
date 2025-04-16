@@ -2,11 +2,11 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FRAME PRO – Edição Profissional de Vídeos</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frame Pro – Edição Profissional de Vídeos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset de estilo */
+    /* Reset e configurações básicas */
     * {
       margin: 0;
       padding: 0;
@@ -14,209 +14,212 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f7;
-      color: #333;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
       line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-
-    /* Layout */
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #000;
-      flex-direction: column;
-      text-align: center;
     }
 
     header {
-      position: absolute;
-      top: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
     }
 
-    header img {
-      max-width: 150px;
-    }
-
-    section {
-      width: 80%;
-      max-width: 900px;
-      margin: 20px 0;
-      padding: 40px;
-      background-color: #fff;
-      border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      color: #00ff99;
+    header h1 {
+      font-size: 2.5em;
       margin-bottom: 10px;
     }
 
-    p {
-      font-size: 1.1rem;
-      color: #666;
-      max-width: 700px;
-      margin: 20px auto;
+    header a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #ff007f;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
 
-    /* Planos */
-    .plans ul {
-      list-style: none;
-      padding: 0;
+    header a:hover {
+      background: #e60073;
     }
 
-    .plans li {
-      background: #f7f7f7;
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-size: 2em;
       margin-bottom: 20px;
+      color: #ff007f;
+    }
+
+    section p, section ul {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li::before {
+      content: "👉 ";
+      color: #ff007f;
+    }
+
+    .planos, .servicos {
+      background: rgba(255, 255, 255, 0.1);
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 20px;
     }
 
-    .plans li:hover {
-      transform: scale(1.05);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    .faq {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 10px;
     }
 
-    .plans h2 {
-      font-size: 1.8rem;
-      color: #333;
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      font-size: 0.9em;
     }
 
-    .plans ul li p {
-      font-size: 1rem;
-      color: #666;
-    }
-
-    .plans ul li strong {
-      font-size: 1.3rem;
-      color: #333;
-    }
-
-    /* Botões */
-    .button {
-      display: inline-block;
-      padding: 15px 30px;
-      margin-top: 30px;
-      font-size: 1.1rem;
-      color: #fff;
-      background-color: #00ff99;
-      border-radius: 40px;
-      text-decoration: none;
-      box-shadow: 0 0 0 rgba(0, 255, 153, 0.4);
-      transition: all 0.3s ease;
-    }
-
-    .button:hover {
-      background-color: #00cc77;
-      transform: scale(1.05);
-    }
-
-    /* Animações avançadas */
-    @keyframes fadeIn {
-      0% {
+    /* Animações */
+    @keyframes fadeInUp {
+      from {
         opacity: 0;
         transform: translateY(20px);
       }
-      100% {
+      to {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
     section {
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    /* Rodapé */
-    footer {
-      background-color: #121212;
-      padding: 20px;
-      text-align: center;
-      color: #fff;
-      margin-top: 50px;
+      animation: fadeInUp 1s ease-in-out;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <header data-aos="fade-down">
-      <img src="logo-frame-pro.png" alt="FRAME PRO Logo" />
-    </header>
+  <header>
+    <h1>FRAME PRO</h1>
+    <a href="https://wa.me/SEUNUMEROWHATSAPP" target="_blank">Fale com a gente no WhatsApp</a>
+  </header>
 
-    <section data-aos="fade-up">
-      <h1>FRAME PRO</h1>
-      <p>Edição de vídeos profissional para infoprodutores, influenciadores, YouTubers, casamentos e muito mais.</p>
-      <a class="button" href="https://wa.me/5534999916099?text=Olá%2C+quero+um+orçamento+de+edição+de+vídeo+na+FRAME+PRO!" target="_blank">Fale com a gente no WhatsApp</a>
-    </section>
+  <section>
+    <h2>Edição Profissional de Vídeos</h2>
+    <p>Vídeos que vendem, conectam e marcam.</p>
+    <p>Se você é infoprodutor, influenciador, YouTuber, filmmaker ou precisa de vídeos impactantes para casamentos ou negócios, a FRAME PRO é sua parceira ideal.</p>
+    <p>A gente não só edita: a gente transforma ideias em experiências visuais que engajam, emocionam e convertem.</p>
+  </section>
 
-    <section data-aos="fade-up">
-      <h2>Planos da FRAME PRO</h2>
-      <div class="plans">
-        <ul>
-          <li>
-            <h2>🟢 Starter – R$ 397/mês</h2>
-            <p><strong>Ideal para quem está começando e precisa de edição semanal sem complicação.</strong></p>
-            <ul>
-              <li>✔️ 1 vídeo editado por semana (até 6 minutos)</li>
-              <li>✔️ Correções simples inclusas (até 2 revisões)</li>
-              <li>✔️ Edição básica (corte, ajuste de áudio e colorização)</li>
-              <li>✔️ Entrega em até 5 dias úteis</li>
-            </ul>
-          </li>
+  <section>
+    <h2>💡 O que a FRAME PRO faz por você</h2>
+    <ul>
+      <li>Infoprodutores – Vídeos para lançamentos, aulas, bastidores e autoridade.</li>
+      <li>Casamentos – Transformamos registros em filmes que emocionam para sempre.</li>
+      <li>VSLs e vídeos de vendas – Edições que mantêm a atenção e aumentam conversão.</li>
+      <li>YouTubers – Vlogs, reviews, tutoriais com ritmo, estilo e presença.</li>
+      <li>Cortes para redes sociais – Conteúdo rápido, direto e viral para TikTok, Instagram e Shorts.</li>
+    </ul>
+  </section>
 
-          <li>
-            <h2>🔵 Pro – R$ 997/mês</h2>
-            <p><strong>Para criadores que precisam de conteúdo constante e cortado para redes sociais.</strong></p>
-            <ul>
-              <li>✔️ 3 vídeos editados por semana (até 10 minutos cada)</li>
-              <li>✔️ 6 cortes otimizados para redes sociais (Instagram, TikTok, YouTube Shorts)</li>
-              <li>✔️ Edição com identidade visual personalizada (intro, animações e transições)</li>
-              <li>✔️ Correções ilimitadas dentro do prazo</li>
-              <li>✔️ Entrega rápida: de 2 a 3 dias úteis</li>
-            </ul>
-          </li>
+  <section>
+    <h2>🧾 Planos Mensais (Recorrência)</h2>
 
-          <li>
-            <h2>🟣 Premium – R$ 1.797/mês</h2>
-            <p><strong>Plano ideal para empresas, YouTubers e projetos com volume alto de vídeos e necessidade de edição diferenciada.</strong></p>
-            <ul>
-              <li>✔️ 5 vídeos editados por semana (até 12 minutos cada)</li>
-              <li>✔️ 10 cortes otimizados para redes sociais (Instagram, TikTok, Reels)</li>
-              <li>✔️ Edição avançada (animações, efeitos especiais, transições premium)</li>
-              <li>✔️ Prioridade na entrega e atendimento personalizado</li>
-              <li>✔️ Correções ilimitadas com atendimento dedicado</li>
-              <li>✔️ Entrega em até 2 dias úteis</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <div class="planos">
+      <h3>🟢 Starter – R$ 397/mês</h3>
+      <ul>
+        <li>1 vídeo editado por semana (até 6 minutos)</li>
+        <li>2 revisões simples inclusas</li>
+        <li>Edição básica (corte, áudio, cor)</li>
+        <li>Entrega: até 5 dias úteis</li>
+      </ul>
+    </div>
 
-    <section data-aos="zoom-in">
-      <h2>Pronto para transformar seus vídeos?</h2>
-      <a class="button" href="https://wa.me/5534999916099?text=Olá%2C+quero+começar+com+a+FRAME+PRO!" target="_blank">Chamar no WhatsApp</a>
-    </section>
+    <div class="planos">
+      <h3>🔵 Pro – R$ 997/mês</h3>
+      <ul>
+        <li>3 vídeos editados por semana (até 6 minutos cada)</li>
+        <li>6 cortes para Reels, TikTok e Shorts</li>
+        <li>Intro personalizada, animações e transições</li>
+        <li>Revisões ilimitadas</li>
+        <li>Entrega: até 3 dias úteis</li>
+      </ul>
+    </div>
 
-    <footer>
-      <p>© 2025 FRAME PRO – Todos os direitos reservados.</p>
-    </footer>
-  </div>
+    <div class="planos">
+      <h3>🟣 Premium – R$ 1.797/mês</h3>
+      <ul>
+        <li>5 vídeos editados por semana (até 12 minutos cada)</li>
+        <li>10 cortes otimizados para redes sociais</li>
+        <li>Edição avançada com efeitos, animações, transições premium</li>
+        <li>Atendimento prioritário e suporte dedicado</li>
+        <li>Entrega: até 2 dias úteis</li>
+      </ul>
+    </div>
+  </section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000 });
-  </script>
+  <section>
+    <h2>🎬 Serviços Avulsos (sem recorrência)</h2>
+
+    <div class="servicos">
+      <h3>💒 Vídeo de casamento (até 10 min) – R$ 350</h3>
+      <p>Transforme seu grande dia em um filme inesquecível.</p>
+    </div>
+
+    <div class="servicos">
+      <h3>🎓 VSL (Vídeo de vendas até 12 min) – R$ 320</h3>
+      <p>Aumente suas vendas com um vídeo de vendas impactante.</p>
+    </div>
+
+    <div class="servicos">
+      <h3>📺 Edição de vídeo para YouTube (até 10 min) – R$ 300</h3>
+      <p>Videos otimizados para engajamento e audiência no YouTube.</p>
+    </div>
+
+    <div class="servicos">
+      <h3>✂️ Corte para redes sociais (até 1 min) – R$ 80</h3>
+      <p>Conteúdo rápido, direto e viral para suas redes sociais.</p>
+    </div>
+
+    <div class="servicos">
+      <h3>📦 Pacote com 5 cortes – R$ 350</h3>
+    </div>
+
+    <div class="servicos">
+      <h3>📦 Pacote com 10 cortes – R$ 650</h3>
+    </div>
+
+    <div class="servicos">
+      <h3>🎬 Vídeo institucional ou corporativo (até 5 min) – R$ 450</h3>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>❓ Perguntas Frequentes</h2>
+    <p><strong>Qual o prazo de entrega?</strong> De 2 a 5 dias úteis, dependendo do plano.</p>
+    <p><strong>Posso testar antes de contratar?</strong> Sim! Oferecemos um vídeo de teste gratuito.</p>
+    <p><strong>Como envio meu material?</strong> Você recebe um link para enviar via Google Drive ou WeTransfer.</p>
+  </section>
+
+  <section>
+    <h2>🚀 Pronto para transformar seus vídeos?</h2>
+    <a href="https://wa.me/SEUNUMEROWHATSAPP" target="_blank">Clique aqui para conversar no WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>© 2025 FRAME PRO – Todos os direitos reservados</p>
+  </footer>
+
 </body>
 </html>
 
