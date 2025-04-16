@@ -10,32 +10,19 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
-      background: #000;
-      color: #fff;
+      background: #ffffff;
+      color: #1b2a38;
       line-height: 1.6;
       position: relative;
       overflow-x: hidden;
     }
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      top: 0;
-      left: 0;
-    }
     header {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 20px;
+      padding: 40px 20px 10px;
       text-align: center;
     }
     header img {
-      max-width: 180px;
-      margin-bottom: 20px;
-    }
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+      max-width: 300px;
+      margin-bottom: 30px;
     }
     header a {
       display: inline-block;
@@ -60,17 +47,18 @@
     ul { list-style: none; margin-bottom: 30px; }
     ul li::before { content: "👉 "; color: #ff007f; }
     .planos, .servicos, .faq {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(27, 42, 56, 0.05);
       padding: 20px;
       border-radius: 12px;
       margin-bottom: 30px;
     }
-    .planos h3, .servicos h3 { color: #00ffff; margin-bottom: 10px; }
+    .planos h3, .servicos h3 { color: #1b2a38; margin-bottom: 10px; }
     footer {
       text-align: center;
       padding: 30px 10px;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.03);
       font-size: 0.9em;
+      color: #555;
     }
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
@@ -80,11 +68,8 @@
 </head>
 <body>
 
-  <div id="particles-js"></div>
-
   <header>
     <img src="LOGO - FRAME.png" alt="Logo Frame Pro">
-    <h1>FRAME PRO</h1>
     <a href="https://wa.me/5534999916099" target="_blank">Fale com a gente no WhatsApp</a>
   </header>
 
@@ -166,33 +151,6 @@
   <footer>
     <p>© 2025 FRAME PRO – Todos os direitos reservados</p>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#ffffff" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.3 },
-        "size": { "value": 3 },
-        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
-        "move": { "enable": true, "speed": 2 }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" },
-          "onclick": { "enable": true, "mode": "push" }
-        },
-        "modes": {
-          "repulse": { "distance": 100 },
-          "push": { "particles_nb": 4 }
-        }
-      },
-      "retina_detect": true
-    });
-  </script>
 
 </body>
 </html>
