@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,112 +7,85 @@
   <title>Frame Pro – Edição Profissional de Vídeos</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset e configurações básicas */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background: #000;
       color: #fff;
       line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
     }
-
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
     header {
       background: rgba(0, 0, 0, 0.6);
       padding: 20px;
       text-align: center;
     }
-
+    header img {
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
     header h1 {
       font-size: 2.5em;
       margin-bottom: 10px;
     }
-
     header a {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 25px;
       background: #ff007f;
       color: #fff;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-weight: 600;
       transition: background 0.3s;
     }
-
     header a:hover {
       background: #e60073;
     }
-
     section {
       padding: 60px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
+      animation: fadeInUp 1s ease-in-out;
     }
-
-    section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #ff007f;
-    }
-
-    section p, section ul {
-      margin-bottom: 20px;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    ul li::before {
-      content: "👉 ";
-      color: #ff007f;
-    }
-
-    .planos, .servicos {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    .faq {
+    h2 { font-size: 2em; margin-bottom: 20px; color: #ff007f; }
+    ul { list-style: none; margin-bottom: 30px; }
+    ul li::before { content: "👉 "; color: #ff007f; }
+    .planos, .servicos, .faq {
       background: rgba(255, 255, 255, 0.05);
       padding: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
+      margin-bottom: 30px;
     }
-
+    .planos h3, .servicos h3 { color: #00ffff; margin-bottom: 10px; }
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 30px 10px;
       background: rgba(0, 0, 0, 0.6);
       font-size: 0.9em;
     }
-
-    /* Animações */
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    section {
-      animation: fadeInUp 1s ease-in-out;
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
+  <div id="particles-js"></div>
+
   <header>
+    <img src="LOGO - FRAME.png" alt="Logo Frame Pro">
     <h1>FRAME PRO</h1>
-    <a href="https://wa.me/SEUNUMEROWHATSAPP" target="_blank">Fale com a gente no WhatsApp</a>
+    <a href="https://wa.me/5534999916099" target="_blank">Fale com a gente no WhatsApp</a>
   </header>
 
   <section>
@@ -134,7 +108,6 @@
 
   <section>
     <h2>🧾 Planos Mensais (Recorrência)</h2>
-
     <div class="planos">
       <h3>🟢 Starter – R$ 397/mês</h3>
       <ul>
@@ -144,7 +117,6 @@
         <li>Entrega: até 5 dias úteis</li>
       </ul>
     </div>
-
     <div class="planos">
       <h3>🔵 Pro – R$ 997/mês</h3>
       <ul>
@@ -155,7 +127,6 @@
         <li>Entrega: até 3 dias úteis</li>
       </ul>
     </div>
-
     <div class="planos">
       <h3>🟣 Premium – R$ 1.797/mês</h3>
       <ul>
@@ -169,38 +140,14 @@
   </section>
 
   <section>
-    <h2>🎬 Serviços Avulsos (sem recorrência)</h2>
-
+    <h2>🎬 Serviços Avulsos</h2>
     <div class="servicos">
-      <h3>💒 Vídeo de casamento (até 10 min) – R$ 350</h3>
-      <p>Transforme seu grande dia em um filme inesquecível.</p>
-    </div>
-
-    <div class="servicos">
-      <h3>🎓 VSL (Vídeo de vendas até 12 min) – R$ 320</h3>
-      <p>Aumente suas vendas com um vídeo de vendas impactante.</p>
-    </div>
-
-    <div class="servicos">
-      <h3>📺 Edição de vídeo para YouTube (até 10 min) – R$ 300</h3>
-      <p>Videos otimizados para engajamento e audiência no YouTube.</p>
-    </div>
-
-    <div class="servicos">
-      <h3>✂️ Corte para redes sociais (até 1 min) – R$ 80</h3>
-      <p>Conteúdo rápido, direto e viral para suas redes sociais.</p>
-    </div>
-
-    <div class="servicos">
-      <h3>📦 Pacote com 5 cortes – R$ 350</h3>
-    </div>
-
-    <div class="servicos">
-      <h3>📦 Pacote com 10 cortes – R$ 650</h3>
-    </div>
-
-    <div class="servicos">
-      <h3>🎬 Vídeo institucional ou corporativo (até 5 min) – R$ 450</h3>
+      <h3>💒 Casamento – R$ 350</h3>
+      <h3>🎓 VSL (até 12 min) – R$ 320</h3>
+      <h3>📺 YouTube (até 10 min) – R$ 300</h3>
+      <h3>✂️ Corte p/ redes (1 min) – R$ 80</h3>
+      <h3>📦 5 cortes – R$ 350 | 📦 10 cortes – R$ 650</h3>
+      <h3>🏢 Institucional (até 5 min) – R$ 450</h3>
     </div>
   </section>
 
@@ -213,14 +160,39 @@
 
   <section>
     <h2>🚀 Pronto para transformar seus vídeos?</h2>
-    <a href="https://wa.me/SEUNUMEROWHATSAPP" target="_blank">Clique aqui para conversar no WhatsApp</a>
+    <a href="https://wa.me/5534999916099" target="_blank">Clique aqui para conversar no WhatsApp</a>
   </section>
 
   <footer>
     <p>© 2025 FRAME PRO – Todos os direitos reservados</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
+        "move": { "enable": true, "speed": 2 }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+
 </body>
 </html>
-
-
